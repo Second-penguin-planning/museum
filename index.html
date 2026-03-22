@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徳永ミニプティ美術館</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <nav>
+            <div class="logo">徳永ミニプティ美術館</div>
+            <ul>
+                <li><a href="#takuma-room">徳永卓磨の部屋</a></li>
+                <li><a href="#sachiko-room">徳永幸子の部屋</a></li>
+                <li><a href="#about">美術館について</a></li>
+                <li><a href="#shop">販売店</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>徳永ミニプティ美術館</h1>
+            <p>二人の作家が紡ぐ、小さな芸術の世界</p>
+            <a href="#takuma-room" class="enter-btn">Enter</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="takuma-room" class="room-section">
+            <h2>徳永卓磨の部屋</h2>
+            <div class="gallery-grid">
+                <div class="art-card" onclick="openModal('takuma1', '作品名A', 'F10号', '2023年', 'ここに作品の解説文が入ります。')">
+                    <img src="https://picsum.photos/400/300?sig=1" alt="作品A">
+                    <p>作品名A</p>
+                </div>
+                <div class="art-card" onclick="openModal('takuma2', '作品名B', 'A4', '2024年', '静かな朝の風景を描きました。')">
+                    <img src="https://picsum.photos/400/300?sig=2" alt="作品B">
+                    <p>作品名B</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="sachiko-room" class="room-section">
+            <h2>徳永幸子の部屋</h2>
+            <div class="gallery-grid">
+                <div class="art-card" onclick="openModal('sachiko1', '色彩の記憶', 'SMサイズ', '2022年', '花びらの重なりを表現しました。')">
+                    <img src="https://picsum.photos/400/300?sig=6" alt="色彩の記憶">
+                    <p>色彩の記憶</p>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <div id="artModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <div class="art-details">
+                <h3 id="modalTitle"></h3>
+                <p><strong>大きさ:</strong> <span id="modalSize"></span></p>
+                <p><strong>作成年:</strong> <span id="modalYear"></span></p>
+                <hr>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
