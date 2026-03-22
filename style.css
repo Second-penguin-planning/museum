@@ -152,3 +152,56 @@ nav ul li a:hover {
 .preparing { font-style: italic; color: #888; font-size: 1.5rem; margin-top: 50px; }
 
 /* モーダル等は前回コードを継承（略） */
+/* 部屋全体の余白調整 */
+.room-section {
+    padding: 120px 0; /* 上下の余白を広げて見やすく */
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* 看板の親要素（中央寄せ） */
+.room-entrance {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* 徳永卓磨・幸子の大きな看板 */
+.room-sign {
+    display: inline-block;
+    font-size: 2.8rem; /* 大きく */
+    font-family: "serif"; /* 美術館らしい明朝体 */
+    color: #2c2c2c;
+    background-color: #fdfaf5; /* 柔らかな和紙のような色 */
+    padding: 30px 80px;
+    border: 4px double #8d7d65; /* 二重線の枠で高級感を出す */
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1); /* 影をつけて浮き立たせる */
+}
+
+/* 看板の下に少し装飾を（任意） */
+.room-sign::after {
+    content: "EXHIBITION";
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    color: #a0907a;
+}
+
+/* 横スクロールコンテナの微調整 */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 0 10%; /* 左右に余白を作って中央寄りに見せる */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.art-card {
+    flex: 0 0 350px; /* カードの幅を固定して安定させる */
+    scroll-snap-align: center;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
